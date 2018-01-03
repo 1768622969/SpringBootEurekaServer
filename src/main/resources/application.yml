@@ -1,0 +1,15 @@
+# eureka默认的管理端口
+server:
+  port: 8761
+
+# 主机名
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    
+    # 注册中心的地址
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
